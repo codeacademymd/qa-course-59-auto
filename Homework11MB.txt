@@ -1,0 +1,112 @@
+Test Case 1
+Feature: Checking the User Registration functionality on utest.com website
+
+Scenario 1: User can register on utest.com website
+Given the user is on utest.com signup page
+And the user is on the 4th step of registration
+And the user entered a valid information in all required fields including previous steps
+And the user checked the required check-boxes
+When the user clicks “Complete Setup” button 
+Then the user should be registered
+And the user should be redirected to the homepage
+
+Scenario 2: User cannot register on utest.com website
+Given the user is on utest.com signup page
+And the user is on the 4th step of registration
+And the user entered a valid information in all required fields including previous steps
+And the user checked the required check-boxes
+When the user clicks “Complete Setup” button 
+Then the user should not be registered
+And the user should not be redirected to the homepage
+
+
+Test Case 2
+Feature: Checking the Login functionality on utest.com website
+
+Scenario 1: User can sign in to pre-created account
+Given the user is on utest.com login page
+And the user entered a valid email address
+And the user entered a valid password
+When the user clicks “Sign in” button 
+Then the user should be signed in
+And the user should be redirected to the homepage
+
+Scenario 2: User cannot sign in to pre-created account
+Given the user is on utest.com login page
+And the user entered a valid email address
+And the user entered a valid password
+When the user clicks “Sign in” button 
+Then the user should not be signed in
+And the user should not be redirected to the homepage
+
+
+Test Case 3
+Feature: Checking Update Profile functionality on utest.com website
+
+Scenario 1: User can update information on personal Tester Profile page
+Given the user is logged in on the utest.com website
+And the user is on Tester Profile page
+And the user is in Devices category
+When the user updates the information
+And the user clicks the “Save” button
+
+ 
+Then the user’s new information should be updated
+And the user should get a pop-up “Changes saved” message in the bottom right corner 
+
+Scenario 2: User cannot update information on personal Tester Profile page
+Given the user is logged in on the utest.com website
+And the user is on Tester Profile page
+And the user is in Devices category
+When the user updates the information
+And the user clicks the “Save” button
+Then the user’s new information should not be updated
+And the user should not get a pop-up “Changes saved” message in the bottom right corner 
+
+
+Test Case 4
+Feature: Checking Change Payment Method functionality on utest.com website
+
+Scenario 1: User can change the payment method
+Given the user is logged in on the utest.com website
+And the user is on Payments page
+And the user has “Payoneer” pre-set as a payment method
+When the user clicks the “Change” button
+And the user selects “PayPal”
+And the user types a valid PayPal email in the bottom placeholder
+And the user clicks the “Save” button
+Then the user’s new payment method should be updated
+And the user should get a pop-up “Payment method changed” message in the bottom right corner 
+
+Scenario 2: User cannot change the payment method
+Given the user is logged in on the utest.com website
+And the user is on Payments page
+And the user has “Payoneer” pre-set as a payment method
+When the user clicks the “Change” button
+And the user selects “PayPal”
+And the user types a valid PayPal email in the bottom placeholder
+And the user clicks the “Save” button
+Then the user’s new payment method should be updated
+And the user should get a pop-up “Payment method changed” message in the bottom right corner 
+
+
+Test Case 5
+Feature: Checking Search for Projects functionality on the Project Board on utest.com website
+
+Scenario 1: User can filter the projects by OS and Country 
+Given the user is logged in on the utest.com website
+And the user is on utest.com homepage
+And the user clicks Projects menu
+And the user selects the Projects Board category
+When the user selects a valid OS from the drop-down list in the first placeholder
+And the user selects a valid Country from the drop-down list in the second placeholder
+Then the user should get the list of projects based on selected options 
+
+Scenario 2: User cannot filter the projects by OS and Country 
+Given the user is logged in on the utest.com website
+And the user is on utest.com homepage
+And the user clicks Projects menu
+And the user selects the Projects Board category
+When the user selects a valid OS from the drop-down list in the first placeholder
+And the user selects a valid Country from the drop-down list in the second placeholder
+Then the user should not get the list of projects based on selected options 
